@@ -1,0 +1,52 @@
+<body class="bg-light d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Resto</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+
+        <!-- Navigation Links -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex align-items-center gap-3">
+          <li class="nav-item">
+            <a class="nav-link custom-nav" routerLink="">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-nav" routerLink="service">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-nav" routerLink="add">Apply Here</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-nav" routerLink="list">List Of Applications</a>
+          </li>
+        </ul>
+
+        <!-- Search Form -->
+        <form class="search-box d-flex align-items-center" role="search">
+          <input class="form-control modern-input" type="search" placeholder="Search courses, departments, students..."
+            aria-label="Search" />
+          <button class="btn modern-btn" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Main Content -->
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+  
+
+  <!-- Sticky Footer -->
+  <footer class="text-white text-center py-2 mt-auto">
+    <h5 class="mb-0">Register Your Admissions Now...</h5>
+  </footer>
+
+</body>

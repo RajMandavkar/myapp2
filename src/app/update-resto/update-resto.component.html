@@ -1,0 +1,65 @@
+<div class="container my-5">
+  <h2 class="text-center text-primary mb-4">Edit Student Details</h2>
+
+  <form [formGroup]="editResto" (ngSubmit)="collection()" class="card shadow p-4">
+    <div class="row g-3">
+      <!-- Name -->
+      <div class="form-floating col-md-6">
+        <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter Name" />
+        <label for="name">Name</label>
+      </div>
+
+      <!-- Email -->
+      <div class="form-floating col-md-6">
+        <input type="email" class="form-control" id="email" formControlName="Email" placeholder="Enter Email" />
+        <label for="email">Email</label>
+      </div>
+
+      <!-- Address -->
+      <div class="form-floating col-md-12">
+        <input type="text" class="form-control" id="address" formControlName="Address" placeholder="Enter Address" />
+        <label for="address">Address</label>
+      </div>
+
+      <!-- Contact -->
+      <div class="form-floating col-md-6">
+        <input type="tel" class="form-control" id="contact" formControlName="Contact"
+          placeholder="Enter Contact Number" />
+        <label for="contact">Contact No.</label>
+      </div>
+
+      <!-- Percentage -->
+      <div class="form-floating col-md-6 position-relative">
+        <input type="number" class="form-control pe-5" id="percentage" formControlName="Percentage"
+          placeholder="Previous %" />
+        <label for="percentage">Previous Percentage</label>
+        <span class="position-absolute top-50 end-0 translate-middle-y me-3">%</span>
+      </div>
+
+      <!-- Position -->
+      <div class="form-floating col-md-12">
+        <select class="form-select" id="position" formControlName="Position">
+          <option selected disabled>Select position</option>
+          <option value="Manager">Bachelor of Commerce</option>
+          <option value="Chef">B.Com in Accounting and Finance</option>
+          <option value="Waiter">B.Com in Banking and Insurance</option>
+          <option value="Cleaner">B.Com in Corporate Secretaryship</option>
+          <option value="Cleaner">Bachelor of Science</option>
+          <option value="Cleaner">B.Sc Mathematics</option>
+          <option value="Cleaner">B.Sc Physics</option>
+          <option value="Cleaner">B.Sc Chemistry</option>
+          <option value="Cleaner">B.Sc Computer Science</option>
+          <option value="Cleaner">B.Sc Information Technology</option>
+        </select>
+        <label for="position">Position Applying For</label>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center mt-4">
+      <button type="submit" class="btn btn-primary px-5 py-2" [disabled]="editResto.invalid">
+        Update
+      </button>
+    </div>
+  </form>
+</div>

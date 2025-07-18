@@ -1,0 +1,183 @@
+.carousel-item img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+
+.counter {
+  font-size: 2.5rem;
+  color: #9a094e;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.text-primary {
+    --bs-text-opacity: 1;
+    color:  #9a094e!important;
+}
+
+.transition-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transition-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.hero-slider {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  animation: backgroundChange 20s infinite ease-in-out;
+}
+
+.hero-slider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
+  z-index: 1;
+}
+
+.overlay-text {
+  z-index: 2;
+  position: relative;
+}
+
+/* Background image animation with college/admission related images */
+@keyframes backgroundChange {
+  0% {
+    background-image: url('https://www.shutterstock.com/image-photo/group-students-digital-tablet-laptop-600nw-2347371743.jpg'); /* campus */
+  }
+  25% {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/047/880/096/small_2x/an-aerial-view-of-a-university-campus-with-students-walking-between-buildings-highlighting-the-architecture-and-landscape-free-video.jpg'); /* students */
+  }
+  50% {
+    background-image: url('https://news.belmont.edu/wp-content/uploads/2019/07/The-Lawn.jpg'); /* library */
+  }
+  75% {
+    background-image: url('https://www.universityofcalifornia.edu/sites/default/files/uc-san-diego-washington-monthly.jpg'); /* lecture hall */
+  }
+  100% {
+    background-image: url('https://www.usnews.com/object/image/0000015b-b66f-d19d-a7db-bfff8c710000/170428-collegetour-stock.jpg?update-time=1536955480383&size=responsive640'); /* back to campus */
+  }
+}
+
+.parallax-section {
+  background-image: url('https://www.shutterstock.com/image-photo/bachelors-degree-admission-school-education-260nw-414075982.jpg'); /* Replace with your college image */
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 700px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-apply {
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: #000000;
+  background-color: #ffc107;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-apply:hover {
+  background-color: #9a094e;
+}
+
+.testimonials-section {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.testimonials-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.student-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h4 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.course {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.feedback {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #444;
+}
+

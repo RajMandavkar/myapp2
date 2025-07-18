@@ -1,0 +1,87 @@
+<div class="container my-5">
+  <h2 class="text-center text-danger mb-4">Apply for Admission</h2>
+
+  <!-- Alert -->
+  <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success:</strong> Your Applicattion has been sent successfully...
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="closeAlert()"></button>
+  </div>
+
+  <!-- Form -->
+  <form [formGroup]="addResto" (ngSubmit)="collectResto()" class="card shadow p-4">
+    <div class="row g-3">
+
+      <!-- Name -->
+      <div class="col-md-6 form-floating">
+        <input type="text" class="form-control" id="name" formControlName="name" placeholder="Your Name" />
+        <label for="name">Name</label>
+        <div class="form-text text-danger" *ngIf="user && user.invalid && user.touched">
+          Please enter name..!
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="col-md-6 form-floating">
+        <input type="email" class="form-control" id="email" formControlName="Email" placeholder="Email" />
+        <label for="email">Email</label>
+        <div class="form-text text-danger" *ngIf="email && email.touched && email.invalid">
+          Please enter valid email..!
+        </div>
+      </div>
+
+      <!-- Contact Number -->
+      <div class="col-md-6 form-floating">
+        <input type="tel" class="form-control" id="contact" formControlName="Contact" placeholder="Contact Number" />
+        <label for="contact">Contact Number</label>
+      </div>
+
+      <!-- Previous Percentage -->
+      <div class="col-md-6">
+        <label for="percentage" class="form-label">Previous Percentage</label>
+        <div class="input-group">
+          <input type="number" class="form-control" id="percentage" formControlName="Percentage"
+            placeholder="Enter percentage" min="0" max="100" />
+          <span class="input-group-text">%</span>
+        </div>
+        <div class="form-text text-danger" *ngIf="percentage?.invalid && percentage?.touched">
+          Please enter a valid percentage (0–100).
+        </div>
+      </div>
+
+      <!-- Position Applying For -->
+      <div class="col-md-6 form-floating">
+        <select class="form-select" id="position" formControlName="Position">
+          <option selected disabled>Select position</option>
+          <option value="Manager">Bachelor of Commerce</option>
+          <option value="Chef">B.Com in Accounting and Finance</option>
+          <option value="Waiter">B.Com in Banking and Insurance</option>
+          <option value="Cleaner">B.Com in Corporate Secretaryship</option>
+          <option value="Cleaner">Bachelor of Science</option>
+          <option value="Cleaner">B.Sc Mathematics</option>
+          <option value="Cleaner">B.Sc Physics</option>
+          <option value="Cleaner">B.Sc Chemistry</option>
+          <option value="Cleaner">B.Sc Computer Science</option>
+          <option value="Cleaner">B.Sc Information Technology</option>
+
+        </select>
+        <label for="position">Position Applying For</label>
+      </div>
+
+      <!-- Address -->
+      <div class="col-md-6 form-floating">
+        <input type="text" class="form-control" id="address" formControlName="Address" placeholder="Address" />
+        <label for="address">Address</label>
+        <div class="form-text text-danger" *ngIf="address && address.invalid && address.touched">
+          Please enter address..!
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center mt-4">
+      <button type="submit" class="btn btn-success px-5 py-2" [disabled]="addResto.invalid">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

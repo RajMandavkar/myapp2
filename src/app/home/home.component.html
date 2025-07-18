@@ -1,0 +1,81 @@
+<section class="hero-slider position-relative text-white d-flex align-items-center justify-content-center">
+  <div class="overlay-text text-center">
+    <h1 class="display-4 fw-bold">Welcome to Our College Website</h1>
+    <p class="lead mb-4">Your gateway to a brighter academic future</p>
+    <a routerLink="/add" class="btn btn-warning px-4 py-2 fw-bold">Apply Now</a>
+  </div>
+</section>
+<!-- Why Choose Us Section -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center text-primary fw-bold mb-4">Why Choose Our College?</h2>
+    <p class="text-center mb-5 text-muted">Discover what makes us a preferred choice among aspiring students.</p>
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center p-3">
+          <img src="https://img.icons8.com/color/96/000000/classroom.png" class="mx-auto" alt="Classroom Icon">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Quality Education</h5>
+            <p class="card-text text-muted">Empowering students through a rich and updated curriculum aligned with global standards.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center p-3">
+          <img src="https://img.icons8.com/color/96/000000/teacher.png" class="mx-auto" alt="Faculty Icon">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Experienced Faculty</h5>
+            <p class="card-text text-muted">Learn from passionate, industry-trained, and student-friendly faculty members.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center p-3">
+          <img src="https://img.icons8.com/color/96/000000/classroom.png" class="mx-auto" alt="Campus Icon">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Modern Campus</h5>
+            <p class="card-text text-muted">Enjoy top-notch facilities including labs, library, WiFi, and a vibrant student community.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Counter Section -->
+<section class="bg-light py-5 border-top border-bottom">
+  <div class="container text-center">
+    <div class="row g-4">
+      <div class="col-md-3" *ngFor="let counter of counters">
+        <div class="p-4 shadow-sm rounded-4 bg-white h-100 transition-hover">
+          <h2 class="counter fw-bold display-5 text-primary mb-2" [attr.data-target]="counter.value">
+            {{ counter.current }}
+          </h2>
+          <p class="text-muted fs-5 mb-0">{{ counter.label }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="parallax-section">
+  <div class="content">
+    <h1>Admissions Open for 2025</h1>
+    <p>Enroll now in our UG & PG Programs. Limited seats available!</p>
+    <button routerLink="/add" class="btn-apply">Apply Now</button>
+  </div>
+</div>
+<section class="testimonials-section">
+  <h2 class="section-title">What Our Students Say</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card" *ngFor="let student of testimonials">
+      <img [src]="student.photo" alt="{{ student.name }}" class="student-photo">
+      <h4>{{ student.name }}</h4>
+      <p class="course">{{ student.course }}</p>
+      <p class="feedback">"{{ student.feedback }}"</p>
+    </div>
+  </div>
+</section>
+
+
